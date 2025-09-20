@@ -1,0 +1,31 @@
+body{
+    background-color: #090c31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora{
+    background-color: gray;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 250px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.pantalla{
+    grid-column: 1/-1;
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
