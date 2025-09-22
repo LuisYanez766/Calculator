@@ -12,7 +12,7 @@ botones.forEach(boton => {
         }
 
         if(boton.id === 'borrar'){
-            if(pantalla.textContent.length === 1){
+            if(pantalla.textContent.length === 1 || pantalla.textContent === 'Error'|| pantalla.textContent === 'Infinity'){
                 pantalla.textContent = '0';
             } else {
                 pantalla.textContent = pantalla.textContent.slice(0, -1);
@@ -21,11 +21,15 @@ botones.forEach(boton => {
         }
 
         if(boton.id === 'igual'){
+            try {
             pantalla.textContent = eval(pantalla.textContent);
+            } catch { 
+                pantalla.textContent = 'Error';
+            }
             return;
         }
 
-        if(pantalla.textContent === '0'){
+        if(pantalla.textContent === '0'|| pantalla.textContent === 'Error'|| pantalla.textContent === 'Infinity'){
             pantalla.textContent = onpressboton;
         } else {
             pantalla.textContent += onpressboton;
